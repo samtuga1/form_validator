@@ -16,7 +16,11 @@ class ForgotRegisterButton extends StatelessWidget {
       onPressed: () {
         onPressed;
       },
-      child: Text(title, style: kTextStyle.copyWith(fontSize: 20)),
+      child: Text(title,
+          style: kTextStyle.copyWith(
+              fontSize: 13,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF0165ff))),
     );
   }
 }

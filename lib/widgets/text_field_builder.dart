@@ -18,7 +18,7 @@ class TextFieldBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 35),
       child: TextFormField(
         obscureText: showPassword,
         validator: (value) {
@@ -29,10 +29,11 @@ class TextFieldBuilder extends StatelessWidget {
         decoration: InputDecoration(
           suffixIcon: iconButton,
           hintText: title,
-          hintStyle: kTextStyle.copyWith(fontSize: 20, color: Colors.grey),
+          hintStyle: kTextStyle.copyWith(
+              fontSize: 15, color: Colors.grey, fontWeight: FontWeight.w100),
           icon: Icon(
             icon,
-            size: 30,
+            size: 23,
           ),
         ),
       ),

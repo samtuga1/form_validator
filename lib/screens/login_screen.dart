@@ -16,8 +16,21 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   late bool _showPassword = false;
-
   final formKey = GlobalKey<FormState>();
+  late Image myImage;
+
+  @override
+  void initState() {
+    super.initState();
+    myImage = Image.asset("assets/images/LoginGif.gif");
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(myImage.image, context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,8 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: ListView(
             shrinkWrap: true,
             children: [
-              Image.asset("assets/images/loginPhoto.png"),
-              kSpacer,
+              myImage,
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18.0),
                 child:
@@ -57,29 +69,30 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  ForgotRegisterButton(
-                    title: 'Forgot Password?',
-                    onPressed: () {},
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: ForgotRegisterButton(
+                      title: 'Forgot Password?',
+                      onPressed: () {},
+                    ),
                   ),
                 ],
               ),
               const SizedBox(
                 height: 10,
               ),
-              LoginButton(formKey: formKey),
-              kSpacer,
+              LoginButton(
+                formKey: formKey,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('New to this app?',
                       style: kTextStyle.copyWith(
-                          fontSize: 20, color: const Color(0xFF7d8795))),
+                          fontSize: 13, color: const Color(0xFF7d8795))),
                   ForgotRegisterButton(title: 'Register', onPressed: () {})
                 ],
               ),
@@ -88,5 +101,10 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 }

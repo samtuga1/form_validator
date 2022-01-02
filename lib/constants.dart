@@ -5,7 +5,7 @@ const kSpacer = SizedBox(
   height: 15,
 );
 
-TextStyle kTextStyle = GoogleFonts.rokkitt(
+TextStyle kTextStyle = GoogleFonts.nunito(
   textStyle: const TextStyle(
       color: Color(0xFF0c1f3b), fontSize: 40, fontWeight: FontWeight.bold),
 );
