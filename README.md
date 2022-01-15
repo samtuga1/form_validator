@@ -1,3 +1,3 @@
 Below is the final product
 
-![form_validator](https://user-images.githubusercontent.com/79772304/149623132-b2ea52a2-fe92-4c99-9f02-ca3c25d882ca.gif)
+https://user-images.githubusercontent.com/79772304/149623249-ba1ab362-4d62-46bf-a74c-992ae6665f2c.mp4
