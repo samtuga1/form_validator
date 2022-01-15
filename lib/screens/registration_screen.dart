@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:login_screen/screens/login_screen.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static String id = 'registration_screen';
@@ -16,7 +15,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context, LoginScreen.id);
+            Navigator.pop(context);
           },
           child: const Text('Go Back to Login Screen'),
         ),

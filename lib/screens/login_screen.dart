@@ -17,19 +17,6 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   late bool _showPassword = false;
   final formKey = GlobalKey<FormState>();
-  late Image myImage;
-
-  @override
-  void initState() {
-    super.initState();
-    myImage = Image.asset("assets/images/LoginGif.gif");
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    precacheImage(myImage.image, context);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: ListView(
             shrinkWrap: true,
             children: [
-              myImage,
+              Image.asset("assets/images/form.png"),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18.0),
                 child:
@@ -101,10 +88,5 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 }
